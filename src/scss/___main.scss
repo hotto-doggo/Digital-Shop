@@ -1,0 +1,29 @@
+$main-font: "PT Sans";
+
+$breakpoint-tablet: 1024px;
+$breakpoint-tablet2: 768px;
+$breakpoint-mobile: 400px;
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: $main-font;
+  outline: none;
+}
+
+.container {
+  max-width: 1300px;
+  width: 100%;
+  padding-left: 86px;
+  padding-right: 86px;
+
+  @media (max-width: $breakpoint-tablet){
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+
+
+// @import "sources/_header";
