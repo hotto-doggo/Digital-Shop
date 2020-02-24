@@ -1,6 +1,6 @@
 $breakpoint-tablet: 1024px;
 $breakpoint-tablet2: 768px;
-$breakpoint-mobile: 500px;
+$breakpoint-mobile: 620px;
 $column-width: 100% / 3 * 1;
 
 .cards {
@@ -41,9 +41,11 @@ $column-width: 100% / 3 * 1;
     padding: 21px 22px 14px 21px;
     border: 0.5px solid #dedede;
     box-shadow: 0px 0px 0px 0.5px #dedede;
+    z-index: 1;
     cursor: pointer;
 
     &:hover {
+      z-index: 2;
       background: #e8eeff;
       border: 0.5px solid #819deb;
       box-shadow: 0px 0px 0px 0.5px #819deb;

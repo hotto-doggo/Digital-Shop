@@ -7,14 +7,51 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="all.css">
-    <title>Document</title>
+    <title>Test task</title>
 </head>
 
 <body>
 
+    <div class="selectmenue" id="selectmenue">
+        <div class="container">
+            <button class="selectmenue__button-close" id="selectmenue-btn-close"></button>
+            <div class="selectmenue__filter-wrapper selectmenue__filter-wrapper--logo">
+                <select name="filter-logo" id="filter-logo" class="selectmenue__filter selectmenue__filter--logo">
+                    <option class="filter__option" class="filter__option" value="Любого типа">Любого логотипа</option>
+                    <option class="filter__option" value="Компакт-камера">Компакт-камера</option>
+                    <option class="filter__option" value="Беззеркальная">Беззеркальная</option>
+                    <option class="filter__option" value="Зеркальная">Зеркальная</option>
+                    <option class="filter__option" value="Среднеформатная">Среднеформатная</option>
+                </select>
+            </div>
+            <div class="selectmenue__filter-wrapper selectmenue__filter-wrapper--brend">
+                <select name="filter-brend" id="filter-brend" class="selectmenue__filter selectmenue__filter--brend">
+                    <option class="filter__option" value="Любого бренда">Любого бренда</option>
+                    <option class="filter__option" value="Canon">Canon</option>
+                    <option class="filter__option" value="Nikon">Nikon</option>
+                    <option class="filter__option" value="Sony">Sony</option>
+                    <option class="filter__option" value="Fujifilm">Fujifilm</option>
+                    <option class="filter__option" value="Samsung">Samsung</option>
+                    <option class="filter__option" value="Olympus">Olympus</option>
+                </select>
+            </div>
+            <div class="selectmenue__price-input-wrapper selectmenue__price-input-wrapper--from">
+                <p class="selectmenue__price-input-text">от</p>
+                <input type="text" name="price-input-min" id="price-input-min" class="selectmenue__price-input"
+                    placeholder="500 000">
+            </div>
+            <div class="selectmenue__price-input-wrapper selectmenue__price-input-wrapper--to">
+                <p class="selectmenue__price-input-text">до</p>
+                <input type="text" name="price-input-max" id="price-input-max" class="selectmenue__price-input"
+                    placeholder="25 000 000">
+            </div>
+            <button class="selectmenue__button" id="selectmenue-btn-submit">ПРИМЕНИТЬ</button>
+        </div>
+    </div>
+
     <header class="header">
         <div class="container">
-            <div class="header__burgermenu">
+            <div class="header__burgermenu" id="burgermenu-button">
                 <div class="header__burgermenu-line"></div>
                 <div class="header__burgermenu-line"></div>
                 <div class="header__burgermenu-line"></div>
@@ -25,19 +62,28 @@
                 </a>
                 <a href="#" class="header__phone">8 800 777 50 50</a>
                 <div class="header__search">
-                    <button class="search__button"><img src="img/search_button.svg" alt="search__button"
-                            class="button__img"></button>
+                    <button class="search__button">
+                        <svg class="button__img" width="13" height="13" viewBox="0 0 13 13" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M8.68135 1.48741C6.69814 -0.495804 3.4703 -0.495804 1.48709 1.48741C-0.495696 3.47106 -0.495696 6.69846 1.48709 8.6821C3.2532 10.4478 6.00382 10.6369 7.98574 9.25819C8.02744 9.45553 8.12289 9.64383 8.27637 9.79731L11.1646 12.6855C11.5855 13.1055 12.2656 13.1055 12.6843 12.6855C13.1048 12.265 13.1048 11.5849 12.6843 11.1657L9.79613 8.27669C9.64351 8.1245 9.45477 8.02863 9.25744 7.98692C10.6371 6.00457 10.4479 3.25438 8.68135 1.48741ZM7.76949 7.77024C6.28885 9.25089 3.87916 9.25089 2.39895 7.77024C0.919166 6.2896 0.919166 3.88034 2.39895 2.3997C3.87916 0.919489 6.28885 0.919489 7.76949 2.3997C9.25013 3.88034 9.25013 6.2896 7.76949 7.77024Z"
+                                fill="white" />
+                        </svg>
+                    </button>
                     <input type="search" name="search__input" id="search__input" class="search__input"
                         placeholder="Поиск товаров">
                 </div>
             </div>
             <a href="#" class="header__delivery-link">Доставка и оплата</a>
             <button class="header__cart-button-mobile">
-                <img src="img/cart-button.svg" alt="cart-button" class="cart-button__img">
+                <svg class="cart-button__img" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16.3015 2.91311H3.0096L2.81202 0.652847C2.77971 0.28322 2.47804 0 2.11666 0H0.69816C0.312576 0 0 0.320979 0 0.716927C0 1.11288 0.312576 1.43385 0.69816 1.43385H1.47837C1.90475 6.31176 0.802785 -6.29581 2.28136 10.6204C2.33834 11.2825 2.68672 12.0009 3.28687 12.4891C2.20482 13.9081 3.19349 16 4.95361 16C6.4145 16 7.44488 14.5038 6.9439 13.0868H10.765C10.2647 14.502 11.2928 16 12.7553 16C13.9224 16 14.872 15.0249 14.872 13.8264C14.872 12.628 13.9224 11.6529 12.7553 11.6529H4.95834C4.428 11.6529 3.96585 11.3243 3.76638 10.8456L14.9239 10.1723C15.2285 10.1539 15.4862 9.93446 15.5603 9.63048L16.9789 3.80391C17.0888 3.35211 16.7558 2.91311 16.3015 2.91311ZM4.95361 14.5661C4.55646 14.5661 4.23331 14.2343 4.23331 13.8264C4.23331 13.4186 4.55646 13.0868 4.95361 13.0868C5.3508 13.0868 5.67395 13.4186 5.67395 13.8264C5.67395 14.2343 5.3508 14.5661 4.95361 14.5661ZM12.7553 14.5661C12.3581 14.5661 12.035 14.2343 12.035 13.8264C12.035 13.4186 12.3581 13.0868 12.7553 13.0868C13.1525 13.0868 13.4756 13.4186 13.4756 13.8264C13.4756 14.2343 13.1525 14.5661 12.7553 14.5661ZM14.33 8.77181L3.57844 9.42062L3.13494 4.34693H15.4073L14.33 8.77181Z" fill="white"/>
+                    </svg>
             </button>
         </div>
     </header>
-    <div class="navigation navigation--active">
+
+    <div class="navigation" id="burgermenu-nav">
         <div class="container">
             <nav class="navigation__navigation">
                 <ul class="navigation__nav">
@@ -49,9 +95,9 @@
                 </ul>
             </nav>
             <button class="navigation__cart-button">
-                <img src="img/cart-button.svg" alt="cart-button" class="cart-button__img"><img
-                    src="img/cart-button-yellow.svg" alt="cart-button-yellow"
-                    class="cart-button__img cart-button__img--hovered">КОРЗИНА</button>
+                <svg class="cart-button__img" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16.3015 2.91311H3.0096L2.81202 0.652847C2.77971 0.28322 2.47804 0 2.11666 0H0.69816C0.312576 0 0 0.320979 0 0.716927C0 1.11288 0.312576 1.43385 0.69816 1.43385H1.47837C1.90475 6.31176 0.802785 -6.29581 2.28136 10.6204C2.33834 11.2825 2.68672 12.0009 3.28687 12.4891C2.20482 13.9081 3.19349 16 4.95361 16C6.4145 16 7.44488 14.5038 6.9439 13.0868H10.765C10.2647 14.502 11.2928 16 12.7553 16C13.9224 16 14.872 15.0249 14.872 13.8264C14.872 12.628 13.9224 11.6529 12.7553 11.6529H4.95834C4.428 11.6529 3.96585 11.3243 3.76638 10.8456L14.9239 10.1723C15.2285 10.1539 15.4862 9.93446 15.5603 9.63048L16.9789 3.80391C17.0888 3.35211 16.7558 2.91311 16.3015 2.91311ZM4.95361 14.5661C4.55646 14.5661 4.23331 14.2343 4.23331 13.8264C4.23331 13.4186 4.55646 13.0868 4.95361 13.0868C5.3508 13.0868 5.67395 13.4186 5.67395 13.8264C5.67395 14.2343 5.3508 14.5661 4.95361 14.5661ZM12.7553 14.5661C12.3581 14.5661 12.035 14.2343 12.035 13.8264C12.035 13.4186 12.3581 13.0868 12.7553 13.0868C13.1525 13.0868 13.4756 13.4186 13.4756 13.8264C13.4756 14.2343 13.1525 14.5661 12.7553 14.5661ZM14.33 8.77181L3.57844 9.42062L3.13494 4.34693H15.4073L14.33 8.77181Z" fill="white"/>
+                    </svg>КОРЗИНА</button>
         </div>
     </div>
 
@@ -90,11 +136,12 @@
                     placeholder="25 000 000">
             </div>
             <p class="filters__price-units">РУБЛЕЙ</p>
-            <button class="filters__button">
+            <button class="filters__button" id="selectmenue-btn-open">
                 <img src="img/filters.svg" alt="filters" class="filters__button-img">
             </button>
         </div>
     </div>
+
     <div class="cards">
         <div class="container">
             <!-- .cards__card>img.card__img+.card__description>h2.description__heading+p.description__text+p.description__price-old+.description__price>p.description__price-text+button.description__cart-button -->
@@ -260,8 +307,6 @@
 
         </div>
     </div>
-
-
 
 
 

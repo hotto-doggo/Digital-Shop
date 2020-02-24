@@ -1,5 +1,5 @@
 $breakpoint-tablet: 1024px;
-$breakpoint-mobile: 500px;
+$breakpoint-mobile: 620px;
 
 .header {
   display: flex;
@@ -31,6 +31,10 @@ $breakpoint-mobile: 500px;
     align-items: center;
     display: none;
     cursor: pointer;
+
+    &:hover .header__burgermenu-line{
+      background: #FBFF3D;
+    }
 
     @media (max-width: $breakpoint-tablet) {
       display: flex;
@@ -133,6 +137,12 @@ $breakpoint-mobile: 500px;
     @media (max-width: $breakpoint-tablet){
       display: flex;
     }
+
+    &:hover{
+      & .cart-button__img * {
+        fill: #fbff3d;
+      }
+    }
     // @media (max-width: $breakpoint-tablet){
     //   margin-left: 0;
     // }
@@ -147,6 +157,15 @@ $breakpoint-mobile: 500px;
     background: transparent;
     border: none;
     padding: 0 8px 2px 0;
+    cursor: pointer;
+
+    &:hover{
+      & .button__img *{
+        fill: #FBFF3D;
+      }
+    }
+
+
   }
   &__input {
     background: transparent;

@@ -58,15 +58,13 @@ $breakpoint-tablet: 1024px;
     line-height: 21px;
     color: #ffffff;
     cursor: pointer;
+    &:hover{
+      & .cart-button__img * {
+        fill: #fbff3d;
+      }
+    }
     &:hover {
       color: #fbff3d;
-
-      & .cart-button__img {
-        display: none;
-      }
-      & .cart-button__img--hovered {
-        display: flex;
-      }
     }
     @media (max-width: $breakpoint-tablet) {
       display: none;
@@ -110,9 +108,5 @@ $breakpoint-tablet: 1024px;
 .cart-button {
   &__img {
     margin-right: 10px;
-
-    &--hovered {
-      display: none;
-    }
   }
 }
